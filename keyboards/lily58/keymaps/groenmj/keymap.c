@@ -148,23 +148,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  
 /* LOWER
  * ,-----------------------------------------.                    ,-----------------------------------------.
- * | NmPad| M Ac1| M Ac2| M Ac3|      |      |                    | Top  |      |      |Bottom| Pause| PScr |
+ * | NmPad| M Ac1| M Ac2| M Ac3|      |      |                    |      | Top  |Bottom|ScrLck| Pause| PScr |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * |      | Vol+ |MWh Lt| M Up |MWh Rt|MWh Up|                    | Home | PgDn | PgUp | End  | Ins  | Del  |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * |      | Vol- | M Lt | M Dw | M Rt |MWh Dw|-------.    ,-------| Left | Down |  Up  |Right |      |      |
  * |------+------+------+------+------+------|       |    |       |------+------+------+------+------+------|
- * |BOOTLD| Mute |      |      |      |      |-------|    |-------|Wd Lft| M Bt1| M Bt2|Wd Rgt|      |      |
+ * |BOOTLD| Mute |      |  P-  |  P+  |  P*  |-------|    |-------|Wd Lft| M Bt1| M Bt2|Wd Rgt|      |      |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
  *                   | LALT |Lower |LShift| /Space  /       \Delete\  |RShift|Raise | RALT |
  *                   |      |      |      |/       /         \      \ |Enter |      |      |
  *                   `----------------------------'           '------''--------------------'
  */
 [_LOWER] = LAYOUT( \
-  TG(_NUMPAD), KC_ACL0, KC_ACL1, KC_ACL2, XXXXXXX, XXXXXXX,                 LCTL(KC_HOME), XXXXXXX, XXXXXXX,LCTL(KC_END),   KC_PAUSE, KC_PSCR, \
+  TG(_NUMPAD), KC_ACL0, KC_ACL1, KC_ACL2, XXXXXXX, XXXXXXX,                 XXXXXXX, LCTL(KC_HOME), LCTL(KC_END), KC_SCRL, KC_PAUSE, KC_PSCR, \
   _______, KC_VOLU, KC_WH_L, KC_MS_U, KC_WH_R, KC_WH_U,                     KC_HOME,       KC_PGDOWN,KC_PGUP, KC_END,        KC_INS, KC_DELETE, \
   _______, KC_VOLD, KC_MS_L, KC_MS_D, KC_MS_R, KC_WH_D,                     KC_LEFT,       KC_DOWN, KC_UP,  KC_RIGHT,       XXXXXXX, XXXXXXX, \
-  QK_BOOT, KC_MUTE, XXXXXXX, _______, _______, XXXXXXX,  XXXXXXX, XXXXXXX,  LCTL(KC_LEFT), KC_BTN1, KC_BTN2,LCTL(KC_RIGHT), XXXXXXX, _______,  \
+  QK_BOOT, KC_MUTE, XXXXXXX, KC_PMNS, KC_PPLS, KC_PAST,  XXXXXXX, XXXXXXX,  LCTL(KC_LEFT), KC_BTN1, KC_BTN2,LCTL(KC_RIGHT), XXXXXXX, _______,  \
                              _______, _______, LSFT_T(KC_CAPS),  XXXXXXX, KC_DELETE,  RSFT_T(KC_CAPS), _______, _______ \
 ),
 
